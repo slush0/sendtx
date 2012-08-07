@@ -1,8 +1,5 @@
 #!/usr/bin/env python
-#from distribute_setup import use_setuptools
-#use_setuptools()
-
-from distutils.core import setup
+from setuptools import setup
 
 setup(name='sendtx',
       version='0.5',
@@ -12,6 +9,7 @@ setup(name='sendtx',
       url='https://github.com/slush0/sendtx',
       license='public domain',
       packages=['sendtx',],
-      requires=['twisted',],
+      install_requires=['twisted',],
       scripts=['scripts/sendtx',],
+      zip_safe=True,
      )
